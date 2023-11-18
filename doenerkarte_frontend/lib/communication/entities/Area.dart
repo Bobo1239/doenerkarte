@@ -8,17 +8,17 @@ class Area{
 
   factory Area.fromJson(Map<String, dynamic> json) {
     return Area(
-      json['minLat'],
-      json['maxLat'],
-      json['minLon'],
-      json['maxLon'],
+      json['lat-min'],
+      json['lat-max'],
+      json['lon-min'],
+      json['lon-max'],
     );
   }
 
   Map<String, dynamic> toJson() => {
-    'minLat': minLat,
-    'maxLat': maxLat,
-    'minLon': minLon,
-    'maxLon': maxLon,
+    'lat-min': minLat,
+    'lat-max': maxLat,
+    'lon-min': minLon,
+    'lon-max': maxLon,
   };
 }

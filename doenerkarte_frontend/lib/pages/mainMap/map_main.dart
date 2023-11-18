@@ -19,16 +19,18 @@ class _MapMainState extends State<MapMain> {
   MapController mapController = MapController();
   @override
   void initState() {
-    Future<List<Doener>> doeners = DoenerAreaRepository().getDoenerFromArea(Area(48.1372, 11.5755, 48.1372, 11.5755));
-    doeners.then((value) => print(value));
+    Future<List<Doener>> doeners = DoenerAreaRepository().getDoenerFromArea(Area(48.00, 48.1372,  11.00, 11.5755));
+    doeners.then((value) {
+      print(doeners);
+    });
 
     super.initState();
     mapController.mapEventStream.listen((event) {
       var visibleBounds = event.camera.visibleBounds;
       print("${visibleBounds.east}, ${visibleBounds.north}, ${visibleBounds.south}, ${visibleBounds.west}");
     });
-    Future.delayed(Duration(milliseconds: 2000)).then((value) => mapController.rotate(30));
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +47,7 @@ class _MapMainState extends State<MapMain> {
               initialZoom: 9.2,
             ),
             children: [
+
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                 userAgentPackageName: 'com.example.app',
@@ -57,9 +60,20 @@ class _MapMainState extends State<MapMain> {
                   ),
                 ],
               ),
+              Container(
+                  color: Colors.blue,
+                  child: IconButton(onPressed: loadDoener, icon: Icon(Icons.no_food))),
             ],
           ),
       ),
     );
+  }
+
+
+  void loadDoener() {
+    Future<List<Doener>> doeners = DoenerAreaRepository().getDoenerFromArea(Area(48.00, 48.1372,  11.00, 11.5755));
+    doeners.then((value) {
+      print(doeners);
+    });
   }
 }

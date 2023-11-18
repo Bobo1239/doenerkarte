@@ -13,7 +13,17 @@ class BackendCommunicator {
     return json.decode(response.body);
   }
 
-  Future<dynamic> post(String endpoint, {Map<String, dynamic>? body}) async {
+  Future<List<dynamic>> post(String endpoint, {Map<String, dynamic>? body}) async {
+    final response = await http.post(
+      Uri.parse('$baseUrl/$endpoint'),
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode(body),
+    );
+    _handleResponse(response);
+    return json.decode(response.body);
+  }
+
+  Future<List<Map<String, dynamic>>> postListResponse(String endpoint, {Map<String, dynamic>? body}) async {
     final response = await http.post(
       Uri.parse('$baseUrl/$endpoint'),
       headers: {'Content-Type': 'application/json'},

@@ -1,15 +1,19 @@
+import 'dart:ffi';
+
 class Doener {
   double lat;
   double lon;
-  double priceCents;
+  int priceCents;
+  String name;
 
-  Doener(this.lat, this.lon, this.priceCents);
+  Doener(this.lat, this.lon, this.priceCents, this.name);
 
   factory Doener.fromJson(Map<String, dynamic> json) {
     return Doener(
-      json['lat'],
-      json['lon'],
-      json['priceCents'],
+      json['lat'] as double,
+      json['lon'] as double,
+      json['price-cents'] as int,
+      json['name'] as String,
     );
   }
 
