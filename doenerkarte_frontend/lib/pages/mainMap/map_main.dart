@@ -10,6 +10,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../communication/entities/Area.dart';
+import '../../core/utils/geo_utils.dart';
 class MapMain extends StatefulWidget {
   const MapMain({super.key});
 
@@ -23,6 +24,7 @@ class _MapMainState extends State<MapMain> {
   Future<List<Doener>>? doeners;
   LatLngBounds? currentVisibleBounds;
   TextEditingController searchController = TextEditingController();
+  LatLng? currentLocation;
 
   @override
   void initState() {
@@ -30,6 +32,7 @@ class _MapMainState extends State<MapMain> {
     super.initState();
     mapController.mapEventStream.listen((event) {
       setState(() {
+        currentLocation = mapController.camera.center;
         currentVisibleBounds = event.camera.visibleBounds;
       });
       loadDoener();
@@ -72,31 +75,8 @@ class _MapMainState extends State<MapMain> {
                 future: doeners,
                 builder: (context, snapshot) => buildForSnapshot(snapshot),
               ),
-              // Container(
-              //   margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-              //   decoration: BoxDecoration(
-              //     color: Colors.white,
-              //     borderRadius: BorderRadius.circular(10),
-              //   ),
-              //
-              //   child: TextField(
-              //     controller: TextEditingController(),
-              //
-              //     decoration: InputDecoration(
-              //       suffixIcon: IconButton(
-              //         onPressed: () => searchAdress(searchController.text),
-              //           icon: Icon(Icons.search)),
-              //
-              //       fillColor: Colors.white,
-              //
-              //       border: OutlineInputBorder(
-              //         borderRadius: BorderRadius.circular(10),
-              //       ),
-              //       labelText: 'Search',
-              //     ),),
-              // )
               AutocompleteAdress(
-                onSelected: (latLng) => mapController.move(latLng, 15),)
+                onSelected: (latLng) => {mapController.move(latLng, 15), currentLocation = latLng},)
             ],
           ),
       ),
@@ -159,7 +139,7 @@ class _MapMainState extends State<MapMain> {
       return Container(
         child: ListTile(
           title: Text(doener.name),
-          subtitle: Text("distance: 5000000km"),
+          subtitle: Text("${getDistanceInMeters(currentLocation??LatLng(0, 0), LatLng(doener.lat, doener.lon))/1000} km"),
           trailing: Text("${(doener.priceCents.toDouble() / 100)}€"),
         ),
       );

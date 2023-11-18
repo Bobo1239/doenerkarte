@@ -20,7 +20,7 @@ class BackendCommunicator {
       body: json.encode(body),
     );
     _handleResponse(response);
-    return json.decode(response.body);
+    return json.decode(utf8.decode(response.bodyBytes));
   }
 
   Future<List<Map<String, dynamic>>> postListResponse(String endpoint, {Map<String, dynamic>? body}) async {
