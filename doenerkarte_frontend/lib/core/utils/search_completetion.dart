@@ -1,35 +1,38 @@
 
-import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
+import 'dart:convert';
 
-class AddressDetailed extends Address {
+import 'package:http/http.dart';
+import 'package:latlong2/latlong.dart';
+import 'package:http/http.dart' as http;
+
+class AddressDetailed {
   final String? housenumber;
+  final String? postcode;
+  final String? name;
+  final String? street;
+  final String? city;
+  final String? state;
+  final String? country;
+
 
   AddressDetailed(
       {this.housenumber,
-        String? postcode,
-        String? name,
-        String? street,
-        String? city,
-        String? state,
-        String? country,
-      }) : super(
-    postcode: postcode,
-    street: street,
-    city: city,
-    name: name,
-    state: state,
-    country: country,
-  );
+        this.postcode,
+        this.name,
+        this.street,
+        this.city,
+        this.state,
+        this.country,
+      });
 
   AddressDetailed.fromPhotonAPI(Map data)
-      : this.housenumber = data["housenumber"] as String?,
-        super(
-          postcode: data["postcode"] as String?,
-          name: data["name"] as String?,
-          street: data["street"] as String?,
-          city: data["city"] as String?,
-          state: data["state"] as String?,
-          country: data["country"] as String?);
+      : this.housenumber = data["housenumber"] as String? ,
+        this.postcode = data["postcode"] as String?,
+          this.name = data["name"] as String?,
+          this.street = data["street"] as String?,
+          this.city = data["city"] as String?,
+          this.state = data["state"] as String?,
+          this.country = data["country"] as String?;
 
   @override
   String toString() {
@@ -60,16 +63,37 @@ class AddressDetailed extends Address {
   }
 }
 
-class SearchInfoDetailed extends SearchInfo {
+class SearchInfoDetailed {
 
+  final LatLng point;
   AddressDetailed? addressDetailed;
+  AddressDetailed? address;
   SearchInfoDetailed({
-    GeoPoint? point,
-    AddressDetailed? address,
+    required this.point,
+    this.address,
     this.addressDetailed
-  }) : super(point: point, address: address);
+  });
 
   SearchInfoDetailed.fromPhotonAPI(Map data)
-      : this.addressDetailed = AddressDetailed.fromPhotonAPI(data['properties'] as Map) ,super(point : GeoPoint(latitude: data["geometry"]["coordinates"][1] as double, longitude: data["geometry"]["coordinates"][0] as double),
-      address : Address.fromPhotonAPI(data["properties"] as Map));
+      : this.addressDetailed = AddressDetailed.fromPhotonAPI(data['properties'] as Map) , point = LatLng(data["geometry"]["coordinates"][1] as double,  data["geometry"]["coordinates"][0] as double),
+      address = AddressDetailed.fromPhotonAPI(data["properties"] as Map);
+}
+
+
+
+Future<List<SearchInfoDetailed>> addressSuggestionDetailed(String searchText,
+    {int limitInformation = 5}) async {
+
+    var uri = Uri.http("photon.komoot.io","/api", {
+      "q": searchText,
+      "limit": limitInformation == 0 ? "" : "$limitInformation"
+    });
+  Response response = await http.get(
+    uri
+  );
+  final json = jsonDecode(response.body);
+
+  return (json["features"] as List)
+      .map((d) => SearchInfoDetailed.fromPhotonAPI(d as Map))
+      .toList();
 }

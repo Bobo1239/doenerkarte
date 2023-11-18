@@ -2,6 +2,7 @@
 import 'package:doenerkarte/communication/entities/Doener.dart';
 import 'package:doenerkarte/communication/repositories/doener_area_repository.dart';
 import 'package:doenerkarte/core/core_widgets/main_scaffold.dart';
+import 'package:doenerkarte/core/reusable_widgetas/adress_autocomplete.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geocode/geocode.dart';
@@ -28,7 +29,10 @@ class _MapMainState extends State<MapMain> {
 
     super.initState();
     mapController.mapEventStream.listen((event) {
-      currentVisibleBounds = event.camera.visibleBounds;
+      setState(() {
+        currentVisibleBounds = event.camera.visibleBounds;
+      });
+      loadDoener();
     });
   }
 
@@ -68,29 +72,31 @@ class _MapMainState extends State<MapMain> {
                 future: doeners,
                 builder: (context, snapshot) => buildForSnapshot(snapshot),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-
-                child: TextField(
-                  controller: TextEditingController(),
-
-                  decoration: InputDecoration(
-                    suffixIcon: IconButton(
-                      onPressed: () => searchAdress(searchController.text),
-                        icon: Icon(Icons.search)),
-
-                    fillColor: Colors.white,
-
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    labelText: 'Search',
-                  ),),
-              )
+              // Container(
+              //   margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              //   decoration: BoxDecoration(
+              //     color: Colors.white,
+              //     borderRadius: BorderRadius.circular(10),
+              //   ),
+              //
+              //   child: TextField(
+              //     controller: TextEditingController(),
+              //
+              //     decoration: InputDecoration(
+              //       suffixIcon: IconButton(
+              //         onPressed: () => searchAdress(searchController.text),
+              //           icon: Icon(Icons.search)),
+              //
+              //       fillColor: Colors.white,
+              //
+              //       border: OutlineInputBorder(
+              //         borderRadius: BorderRadius.circular(10),
+              //       ),
+              //       labelText: 'Search',
+              //     ),),
+              // )
+              AutocompleteAdress(
+                onSelected: (latLng) => mapController.move(latLng, 15),)
             ],
           ),
       ),
@@ -161,6 +167,7 @@ class _MapMainState extends State<MapMain> {
   }
 
   void loadDoener() {
+    print("load doener");
     setState(() {
       doeners = DoenerAreaRepository().getDoenerFromArea(Area(   currentVisibleBounds?.south??0, currentVisibleBounds?.north??0, currentVisibleBounds?.west??0, currentVisibleBounds?.east??0));
     });
