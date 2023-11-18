@@ -1,0 +1,1042 @@
+{
+  "html_attributions": [],
+  "next_page_token": "AcJnMuHipSPPbdw_C-2rLf23TaviStvb3OCj2obw9yCY-lGri6pRxHANOVLI3QmEl9HcI9oA42dc4erfwqSPfTvnotDiz7CWExA2I85dLnyFNcIHD76GmH3ybnLHaDiXyZXOwkF9k9ZMjmVPNoD-Sf954-PfCHy5O_jxeg6F9YBpDr33CT7xEtTRAAUCz1yUSiQLzuD9sTYp4q2WgenVNILnrFIS5SvyacaZ8ozZUXJr6IStC8ufMS5_V5GUaxB9GCDiSBusBm7vKSPqVNdKEpHxWJf_qwVHM3fTxn_05QcN0LWtD9l9qGLYW1qLicDD4ege5aZtLJUXJ09GWVnlay6AXd8m3QnDtOAQTPBqaYhOsTTTtDzfB12LppcwTnNvi7A6WMVO9fiTBkFVvTr-devY23Z8sm9S-fyK37R2_ZSmjJyLh8BWi464bNgdVMNRz9DmbLqzC1Q",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1609284,
+          "lng": 11.5665883
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.16230382989271,
+            "lng": 11.56792747989272
+          },
+          "southwest": {
+            "lat": 48.15960417010727,
+            "lng": 11.56522782010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Orient D\u00f6ner",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110824125550142225040\">A Google User</a>"
+          ],
+          "photo_reference": "AcJnMuHyGwsJxyytsak1CerQSeYcTEhOweuQqFwVoMmcw0c0Ad_NL-pndGgFibcVWOawDsETWZmWCKeDp2FzSqKsl6SwsSWnE-xSVkikwkzrPd0N9jZCn09Xme-6cn-EMEZ7S6btPXiijq0kwNj8W5kPT_0U6E4MCr53wNgmo0s4H8UaKACg",
+          "width": 3000
+        }
+      ],
+      "place_id": "ChIJPzBoi9t1nkcRc2e6B0Qywhg",
+      "plus_code": {
+        "compound_code": "5H68+9J Munich",
+        "global_code": "8FWH5H68+9J"
+      },
+      "price_level": 1,
+      "rating": 3.9,
+      "reference": "ChIJPzBoi9t1nkcRc2e6B0Qywhg",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 246,
+      "vicinity": "Hohenzollernstra\u00dfe 103, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.21237720000001,
+          "lng": 11.5642355
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.21368277989272,
+            "lng": 11.5649858
+          },
+          "southwest": {
+            "lat": 48.21098312010728,
+            "lng": 11.5620386
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "LOKO'S D\u00d6NER",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 6048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107693174771044455230\">FayerLP</a>"
+          ],
+          "photo_reference": "AcJnMuGWVt-vrBq2Kjp-J1_GwDqzn_urPhsO8kLUDfl-riZ11zFR9c7GbCCThDjd1RXH8M64FSk_xFdn-RqyffVMFi8-QV1ayT_XIxnmgpVN4izEnyKM1trkkhvGyLzSopIafOrjVnVr2-HT0emXBgHseXUZQWVMyN5QdtjqhFoH0ihxWRK2",
+          "width": 8064
+        }
+      ],
+      "place_id": "ChIJw1dIObJ2nkcRXWOvefx57_k",
+      "plus_code": {
+        "compound_code": "6H67+XM Munich",
+        "global_code": "8FWH6H67+XM"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJw1dIObJ2nkcRXWOvefx57_k",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 590,
+      "vicinity": "Schlei\u00dfheimer Str. 506, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1623263,
+          "lng": 11.563536
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.16363457989272,
+            "lng": 11.56499012989272
+          },
+          "southwest": {
+            "lat": 48.16093492010727,
+            "lng": 11.56229047010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Uyghur burger kebab",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105046903120977927442\">Aatif Mulla</a>"
+          ],
+          "photo_reference": "AcJnMuHLHdGrv-FDST2qMedJOIafUZfHW-LEek8S3h4KTSaQM0vAInC6OuEpWcVL7Fn7nd4bA7CPg6DcY5WghNUtml-00UvCxSY2xhYDMMKGmw30H1tXujtP6803KrQQMqnWCqBsEY_5iDyP_w-GK4Fkc4L_JTj8jZ7ZlYkhBQuGU951q0u5",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJD9Fetit1nkcRsNEtjP-REX8",
+      "plus_code": {
+        "compound_code": "5H67+WC Munich",
+        "global_code": "8FWH5H67+WC"
+      },
+      "rating": 4.7,
+      "reference": "ChIJD9Fetit1nkcRsNEtjP-REX8",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 77,
+      "vicinity": "Schlei\u00dfheimer Str. 125, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.18004819999999,
+          "lng": 11.5555435
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.18141892989272,
+            "lng": 11.55696382989272
+          },
+          "southwest": {
+            "lat": 48.17871927010728,
+            "lng": 11.55426417010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "D\u00f6nerTreff",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100192839614017675302\">Reinhard Mohr</a>"
+          ],
+          "photo_reference": "AcJnMuG04rAhdSUFIm0ytRea4O7jMVEnEjo1Nuk076t-hAYAAYdMpYtITn2m9SK35cRz64R5g8sWB1_CI9-cSwWiGcGX1ZLLtzExhhNNb5RARxuhN2X9HTmqp87yDIf3G2kSulfyERyQgqiRJPredKZKn-3kIE1UcnrxGt8n8amo9uxIfNrn",
+          "width": 3878
+        }
+      ],
+      "place_id": "ChIJnVkiUIZ2nkcRIdPvy77toFc",
+      "plus_code": {
+        "compound_code": "5HJ4+26 Munich",
+        "global_code": "8FWH5HJ4+26"
+      },
+      "price_level": 2,
+      "rating": 3.8,
+      "reference": "ChIJnVkiUIZ2nkcRIdPvy77toFc",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 341,
+      "vicinity": "Lerchenauer Str. 65-67, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1839442,
+          "lng": 11.5310053
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.18529972989272,
+            "lng": 11.53235532989272
+          },
+          "southwest": {
+            "lat": 48.18260007010728,
+            "lng": 11.52965567010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "KEB UP",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 720,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112754050983896767261\">A Google User</a>"
+          ],
+          "photo_reference": "AcJnMuH4o-amNbMBNX5GDttsy0qtYwfyb3MEu-Lwhh--lcxAG0j5Mv8xxgnuz-kiG8Japo_nLeSskORkKC4OJOwGK0opzssCtpJbpX54syDwy0DTiS1dqylnzxjraQ-pf4sROUNF8Ea-DBeqdVGQnnMlXbZZlsJxmdKQz-Ut6aZ85nxYYQUb",
+          "width": 960
+        }
+      ],
+      "place_id": "ChIJB4JxL_d2nkcRBJkwAshsBk0",
+      "plus_code": {
+        "compound_code": "5GMJ+HC Munich",
+        "global_code": "8FWH5GMJ+HC"
+      },
+      "rating": 3.5,
+      "reference": "ChIJB4JxL_d2nkcRBJkwAshsBk0",
+      "scope": "GOOGLE",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 130,
+      "vicinity": "Hanauer Str. 81, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1773897,
+          "lng": 11.6012757
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.17871997989273,
+            "lng": 11.60266472989272
+          },
+          "southwest": {
+            "lat": 48.17602032010728,
+            "lng": 11.59996507010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Estare Restaurant - Cafe - Bar",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2848,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104313945694385590736\">Estare Restaurant - Cafe - Bar</a>"
+          ],
+          "photo_reference": "AcJnMuFuvY8ijeAGvdOW5cT1OrotuYd1n252Y8SRQB9gkYfd_4w17AYkD1Upgdsu5tyyD57udc5ErWocpZHBZs5Jg-NmfG1J8bUXbcx3_kAs_0EPx1lwnJCCxQ2CXkJJ0hi5f-8dIbrOK7XJJzENBlDbRJTgr7gYz6SOXpQu0XTGkCRfSONp",
+          "width": 4288
+        }
+      ],
+      "place_id": "ChIJYfCeKkx0nkcR2yFR6xpGC0Q",
+      "plus_code": {
+        "compound_code": "5JG2+XF Munich",
+        "global_code": "8FWH5JG2+XF"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJYfCeKkx0nkcR2yFR6xpGC0Q",
+      "scope": "GOOGLE",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 702,
+      "vicinity": "Echinger Str. 1, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1812789,
+          "lng": 11.513057
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.18268817989271,
+            "lng": 11.51438932989272
+          },
+          "southwest": {
+            "lat": 48.17998852010727,
+            "lng": 11.51168967010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Loko's Kebab",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104010584092127248832\">A Google User</a>"
+          ],
+          "photo_reference": "AcJnMuGnX18Mt95I7J8muPVwaZhn0iwWnVFqV2mi1rzLn0jVJDUXXBcMRBd_Xnt3nQgQRYNTEaBVdYrYlj-r5OStS_wM8i0CPJ6Xln7zPJOcxve1gwMRcHsDjLfGEcrBaE86aWR4alDONJ9mKTodTHXaHvkkoEh9BeQP3smUOfQkvJP8mWCn",
+          "width": 1152
+        }
+      ],
+      "place_id": "ChIJh62Ci353nkcRZHUkqF0BEjk",
+      "plus_code": {
+        "compound_code": "5GJ7+G6 Munich",
+        "global_code": "8FWH5GJ7+G6"
+      },
+      "rating": 3.6,
+      "reference": "ChIJh62Ci353nkcRZHUkqF0BEjk",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 111,
+      "vicinity": "Pelkovenstra\u00dfe 42, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1732052,
+          "lng": 11.5861924
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.17481697989272,
+            "lng": 11.58735412989272
+          },
+          "southwest": {
+            "lat": 48.17211732010728,
+            "lng": 11.58465447010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Hans Kebab am Schwabinger Tor",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114984206814247784139\">A Google User</a>"
+          ],
+          "photo_reference": "AcJnMuF-F0khx896FCdR5p9of8PFW6KEnGPL7GgyOrV0L8Oubr3V8aBn1ZXzU6Yv9wNXU_J0sD1RyFz1OUiliE2IXoSPlbJMqDhuutTzcJRVK95G6oFYDI8nGIJDxkPLV7OR5Lq8suq4fVDGHN-LEQSTBQcwOt5a1vellVFHS_r5UL2xrhyJ",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJkfbicCx1nkcRGKsQWsO9lxs",
+      "plus_code": {
+        "compound_code": "5HFP+7F Munich",
+        "global_code": "8FWH5HFP+7F"
+      },
+      "rating": 3.7,
+      "reference": "ChIJkfbicCx1nkcRGKsQWsO9lxs",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 981,
+      "vicinity": "Leopoldstra\u00dfe 182, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1866529,
+          "lng": 11.56151
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.18804377989272,
+            "lng": 11.56283942989272
+          },
+          "southwest": {
+            "lat": 48.18534412010727,
+            "lng": 11.56013977010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Ora Kebap",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116900820665416355014\">mojo</a>"
+          ],
+          "photo_reference": "AcJnMuG2pCspRKULZV4-rcfODJvnxeqG4UROUl7-kDzffVC2yCqLfQI76v02tCmUSSEfs0Q9-iy79OHUShl4ioUkSmM9wkp6aFfrL0d3NOuui4YkiZqvSV4SXriYlGuEZv6MQcArZPqW_E3HJpomU3GAVqJtga2Dleb-K1pxrYkyIuK2ljKS",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJxVa11tB3nkcRU7fQV555TDY",
+      "plus_code": {
+        "compound_code": "5HP6+MJ Munich",
+        "global_code": "8FWH5HP6+MJ"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJxVa11tB3nkcRU7fQV555TDY",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 368,
+      "vicinity": "Moosacher Str. 23, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1802042,
+          "lng": 11.5075115
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.18158422989271,
+            "lng": 11.50877797989272
+          },
+          "southwest": {
+            "lat": 48.17888457010727,
+            "lng": 11.50607832010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Moosacher Imbiss II",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1635,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109415023998141593720\">Marco Latifovic</a>"
+          ],
+          "photo_reference": "AcJnMuG7iWR6cj-KSW4E717oi2KoBKoNv7XEHlZWKPL0HBrxghdOPJXaFhjAU0waBMNDgkhDwrAaVrWXx4w8tTJUGhup-MNjUynsYpc_DqLHNIhW-eqwlRFKLOx0CpRAfLU6-HswL7Lf0F8z-qW5Xqe6XdUhCsBYX341Ys0fqjXwODBxjTSu",
+          "width": 2180
+        }
+      ],
+      "place_id": "ChIJV6CWJKp3nkcRQQCbEbNsF8I",
+      "plus_code": {
+        "compound_code": "5GJ5+32 Munich",
+        "global_code": "8FWH5GJ5+32"
+      },
+      "rating": 3.9,
+      "reference": "ChIJV6CWJKp3nkcRQQCbEbNsF8I",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 132,
+      "vicinity": "Bunzlauer Str. 10, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.2016339,
+          "lng": 11.5912318
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.20289242989272,
+            "lng": 11.59224992989272
+          },
+          "southwest": {
+            "lat": 48.20019277010728,
+            "lng": 11.58955027010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Kerri Imbiss D\u00f6ner Kebap Cevapcici und mehr",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103574731354372168495\">A Google User</a>"
+          ],
+          "photo_reference": "AcJnMuHvckUma2WP3cgJHm-K-RuenTGP_ATK0qLvzbXUh1xotMGQu3kyjLfuCLlDEsF0gSf-sVpk0GFdbeFF5-IX28rh13TzQxBWWEbVHgdbUJ9jNGiJn7wMgjrchDhQDmtCd2RzZ4HEfbIeKgkwllIvPt49sa9H_yGYbYgW2PH8l11ah90G",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJxRUs5QF1nkcRjyCdPzRlnO8",
+      "plus_code": {
+        "compound_code": "6H2R+MF Munich",
+        "global_code": "8FWH6H2R+MF"
+      },
+      "rating": 4.7,
+      "reference": "ChIJxRUs5QF1nkcRjyCdPzRlnO8",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 307,
+      "vicinity": "Heidemannstra\u00dfe 37, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.18472999999999,
+          "lng": 11.58429
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.18607332989271,
+            "lng": 11.58576847989272
+          },
+          "southwest": {
+            "lat": 48.18337367010727,
+            "lng": 11.58306882010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Pascha Restaurant",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1836,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114699175960003277733\">Daniel Kriegler</a>"
+          ],
+          "photo_reference": "AcJnMuEqhQWvCszxPONyiBX_Yt9coMv63AIIkFzTbdpADpLgU-TdpHXmat3OKJ9o0PO6tmLIahERfReQuCppcmRyH_KjHoEVlCbYHmx8WcTzRiHfqCcXE6flsALWeqRMQCJ1-IOeQIPnpWxjSEdPV5FFSGQG3JES_aTeJSe3WYDM_mCiiXbH",
+          "width": 3264
+        }
+      ],
+      "place_id": "ChIJIXmqgDp0nkcR2WT-YKbLS1g",
+      "plus_code": {
+        "compound_code": "5HMM+VP Munich",
+        "global_code": "8FWH5HMM+VP"
+      },
+      "price_level": 1,
+      "rating": 3.4,
+      "reference": "ChIJIXmqgDp0nkcR2WT-YKbLS1g",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 178,
+      "vicinity": "Ingolst\u00e4dter Str. 1, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1622414,
+          "lng": 11.5866086
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.16359312989272,
+            "lng": 11.58786742989272
+          },
+          "southwest": {
+            "lat": 48.16089347010728,
+            "lng": 11.58516777010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "OLIVA Food M\u00fcnchner Freiheit",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112174587161651737356\">Ingo Geller</a>"
+          ],
+          "photo_reference": "AcJnMuGY_KoJ1N3zGKQ61fg7N-8Ppz2NDjYeTTlI825x04A3P2Y7SrN-BqD2eQ7iT9MyyK9ubFSn3BiKceGGN5jbNAjxvEPKf2bADJksEVF2EMLp2bnqWKtI_dVC5sK6Em0sJblLkz8DMrDaMG1AhkUZ2Atw4ByIrLYeFl1T--x_rDIjsSn5",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJPXNiTxF1nkcRAGLPkA7g4hU",
+      "plus_code": {
+        "compound_code": "5H6P+VJ Munich",
+        "global_code": "8FWH5H6P+VJ"
+      },
+      "rating": 3.7,
+      "reference": "ChIJPXNiTxF1nkcRAGLPkA7g4hU",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 140,
+      "vicinity": "U-Bahn Passagen, M\u00fcnchner Freiheit 7, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1615905,
+          "lng": 11.5871007
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.16299682989271,
+            "lng": 11.58831842989272
+          },
+          "southwest": {
+            "lat": 48.16029717010727,
+            "lng": 11.58561877010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "T\u00dcRKITCH K\u00f6fte & Kebap",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 686,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104648152987024479844\">A Google User</a>"
+          ],
+          "photo_reference": "AcJnMuGIfXznp7j952i3MumTl_F83L2zEqS0ihkPlBc51eM1BAA98qQx98H8v2n-GgF7AjeaMyyZO28sqxMbLysrTawJ0aCBfsJQho90CP5S_u1DZY4eg3R1m0lNCOtgPlPR5vqpHvTXnxteZAcWszEEt4I2oi44lt1rx5YAP0XnsJUU146l",
+          "width": 1024
+        }
+      ],
+      "place_id": "ChIJr58y1tN1nkcRdpV2omfNpAU",
+      "plus_code": {
+        "compound_code": "5H6P+JR Munich",
+        "global_code": "8FWH5H6P+JR"
+      },
+      "rating": 3.9,
+      "reference": "ChIJr58y1tN1nkcRdpV2omfNpAU",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 769,
+      "vicinity": "Feilitzschstra\u00dfe 2, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.21371,
+          "lng": 11.5405425
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.21480227989272,
+            "lng": 11.54172187989272
+          },
+          "southwest": {
+            "lat": 48.21210262010727,
+            "lng": 11.53902222010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "D\u00f6ner kebab",
+      "photos": [
+        {
+          "height": 667,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101965778046276331687\">nirmal patel</a>"
+          ],
+          "photo_reference": "AcJnMuEMN9x22pVE6DdEITjhy5bDz0kT5NzngRfWOfw-IB8mMRbnca97xSoyUxEO6ObnQmr5zJmkjKGGkgOlS7YALZjtRrcsXWA_7lthqcUIrxPm-VVkm1_ihyEOb8YP8dPbGTKAoR1te14KFWn8Ra-13mce0F_6Gm_OgLzVG8tzbl1girte",
+          "width": 681
+        }
+      ],
+      "place_id": "ChIJ01qlVL53nkcRocFbFYxUAcI",
+      "plus_code": {
+        "compound_code": "6G7R+F7 Munich",
+        "global_code": "8FWH6G7R+F7"
+      },
+      "rating": 3.1,
+      "reference": "ChIJ01qlVL53nkcRocFbFYxUAcI",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 11,
+      "vicinity": "Walter-Sedlmayr-Platz 6, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.204325,
+          "lng": 11.5633854
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.20568452989273,
+            "lng": 11.56490752989272
+          },
+          "southwest": {
+            "lat": 48.20298487010729,
+            "lng": 11.56220787010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "EssPoint Pide & Grill M\u00fcnchen",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3319,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117639253907447518236\">sevban hilmi Bulut</a>"
+          ],
+          "photo_reference": "AcJnMuEpyajXvw2n6rpH_DuA3HdP4XdFE2BU0iYfdw1G8vt2fbz1Zlc2lzJ0snpDflIILIgZ8QxHaEyahWJtuOCHPm82NL1jKKXbXX5ndFlZB7UG-niXOJgJMRljLFp26ut2EiCA9nXY2rbmd-ha35M9MfUrhs1KpCjOxmrpo8lcgEP_1gcU",
+          "width": 4576
+        }
+      ],
+      "place_id": "ChIJx3B25lp3nkcRbZ4zQaGytVQ",
+      "plus_code": {
+        "compound_code": "6H37+P9 Munich",
+        "global_code": "8FWH6H37+P9"
+      },
+      "rating": 4.1,
+      "reference": "ChIJx3B25lp3nkcRbZ4zQaGytVQ",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 934,
+      "vicinity": "Schlei\u00dfheimer Str. 415, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.2036778,
+          "lng": 11.5635366
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.20499757989272,
+            "lng": 11.56503877989272
+          },
+          "southwest": {
+            "lat": 48.20229792010728,
+            "lng": 11.56233912010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "D\u00f6ner King",
+      "place_id": "ChIJzVN716R2nkcR5S7aS9Py80Q",
+      "plus_code": {
+        "compound_code": "6H37+FC Munich",
+        "global_code": "8FWH6H37+FC"
+      },
+      "rating": 3,
+      "reference": "ChIJzVN716R2nkcR5S7aS9Py80Q",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 4,
+      "vicinity": "Schlei\u00dfheimer Str. 411A, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.2081848,
+          "lng": 11.5627805
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.20954652989272,
+            "lng": 11.56433292989272
+          },
+          "southwest": {
+            "lat": 48.20684687010728,
+            "lng": 11.56163327010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Kebap | Pide | Burger",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110697206422448662249\">Celal \u00dcnal</a>"
+          ],
+          "photo_reference": "AcJnMuFvOQkNsmF8xS09S4qd7EdG36bfGH65Y1TkuL2o7lBLZPj6eXCCip0v-EA0x5mNeQhrcbbNFh3DCLNBfyaxOGoOvdxt0U8uRDDaU5MEGUIQrN27e9S3HFmtLXvJpbHWWZf6hqfEUgArTh8yUbT9m7Bap0uuCO2r3pHrtCIcf-ubhAMx",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJozOTfFd3nkcRWRyh6YknnvI",
+      "plus_code": {
+        "compound_code": "6H57+74 Munich",
+        "global_code": "8FWH6H57+74"
+      },
+      "rating": 4.5,
+      "reference": "ChIJozOTfFd3nkcRWRyh6YknnvI",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 63,
+      "vicinity": "Schlei\u00dfheimer Str. 443, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.1763783,
+          "lng": 11.5046297
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.17766127989272,
+            "lng": 11.50607252989272
+          },
+          "southwest": {
+            "lat": 48.17496162010728,
+            "lng": 11.50337287010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "ENFES Grillhouse",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115206900260789028591\">A Google User</a>"
+          ],
+          "photo_reference": "AcJnMuFhPWgrRiebJoEmN-BnNyMJSMx6Blq6pjlrX-iBtCiTcwJmRnfvOQiTsbP8FsLhr_y_Mu9aajRJslP1RXx77L1qIq3uAg4oK-h2g8cUjOo01bL0t0rVywLjfzwbfQJyfy5edOjOqX2LRwZolKAH0BiAORfr1PcBMdUzMfAwu8YqNiCt",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJfXH0azt3nkcRWspEHJ8pg7s",
+      "plus_code": {
+        "compound_code": "5GG3+HV Munich",
+        "global_code": "8FWH5GG3+HV"
+      },
+      "price_level": 1,
+      "rating": 4.8,
+      "reference": "ChIJfXH0azt3nkcRWspEHJ8pg7s",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 350,
+      "vicinity": "Baubergerstra\u00dfe 32, M\u00fcnchen"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.19598010000001,
+          "lng": 11.6198788
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.19741377989273,
+            "lng": 11.62117462989272
+          },
+          "southwest": {
+            "lat": 48.19471412010729,
+            "lng": 11.61847497010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Family D\u00f6ner",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100059696605839222239\">Zulpiye SPA</a>"
+          ],
+          "photo_reference": "AcJnMuHIjgjOpqqyo37BJLrmR8USXviU_5-kUMl15BJ2VTGbI1oHkVZ4DD2ZadM-NKvWBUYGYzGpjwIOddkiFKB8kJBlAWY9nCFTKAcKsgcqL0beqDuJZ4GjirUbYtxT1EUKKWMN6-xE6wvC6NyvgilSmigsFSY3qE-YSfS0Ov5JODwAs1lF",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJXft45GN0nkcRDi0yVpg0VxY",
+      "plus_code": {
+        "compound_code": "5JW9+CW Munich",
+        "global_code": "8FWH5JW9+CW"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJXft45GN0nkcRDi0yVpg0VxY",
+      "scope": "GOOGLE",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 455,
+      "vicinity": "Kulturheimstra\u00dfe 8, M\u00fcnchen"
+    }
+  ],
+  "status": "OK"
+}

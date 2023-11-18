@@ -1,0 +1,60 @@
+{
+  "html_attributions": [],
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 48.2287792,
+          "lng": 11.8140902
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.23007522989273,
+            "lng": 11.81558012989272
+          },
+          "southwest": {
+            "lat": 48.22737557010728,
+            "lng": 11.81288047010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "\u00d6zkan Kebab",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 810,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107091585040837279100\">A Google User</a>"
+          ],
+          "photo_reference": "AcJnMuEcXq2TcWFVaGeGoP5EXZv_fmaCONz2kbFCulBK63NytvsUCBj9anqZ7JxYaW1fFrRsK5iOaZxlF8RmQf3LkvUza440FNxoiG3AELtc625zgk2UsMFWVYQedofmDMWOQ-xNIrgMxBmrzNaoevOAIZjVk79bYJy-fdxhEB9dCFobQier",
+          "width": 1440
+        }
+      ],
+      "place_id": "ChIJ4xTJn9cPnkcRQuHqtTAMx0o",
+      "plus_code": {
+        "compound_code": "6RH7+GJ Finsing",
+        "global_code": "8FWH6RH7+GJ"
+      },
+      "rating": 4.9,
+      "reference": "ChIJ4xTJn9cPnkcRQuHqtTAMx0o",
+      "scope": "GOOGLE",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 27,
+      "vicinity": "Neu Finzing DE, Am Isarkanal 2, Finsing"
+    }
+  ],
+  "status": "OK",
+  "next_page_token": "AcJnMuGWqHmS243jsZHT3m4nzLwRrdSb15IByZI9Gq2hz9nPDyhrriw1mnzsz63AaQE5WNafrHG3y67QvpCA3xcuiJbdUhtOqYJc7AFJBrdWKE5tL0SQx8N0cY8zhg_gyQtW--bQE54oc9_sV-f_9HoWKVbxq6CfKdHLR0A1rpKiKInl7IlsYpSx3x2o2nnHGNzfE0MLgdixkc7xRtR1H3fANP7R7PL26OY3HXj4esxHkZpIaJYeooceUwW6W0QwEZOwrqq3XyfZ2kcavfxrZf1AGiZQW5YwbClHX067yAKG6hZ-oIODCCBkDJb4KNkIyADfK3B7CUjEAw74kdYWRm612Xf8q8Q6C0G24m4EXYjhkmKgufhIQzrFvCTuJlufNmzO820WBQLEZgsEu5Lc-AVpZ6MwOQqAapGO1rgbMtxyIFVcZX94E6S_3Ue6Z7RUDMjWxYlV8Y0"
+}
