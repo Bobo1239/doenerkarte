@@ -121,7 +121,7 @@ def download_doener_grid(center, radius, width, height, api_key='AIzaSyAn_1vHU9E
 
 api_key = 'AIzaSyAn_1vHU9EfL2QxQBVCt0O8ftzdZieGdic'
 munich= "48.137174, 11.577493" # munich central location
-radius = 2500  # Radius in meters, adjust as needed
+radius = 1500  # Radius in meters, adjust as needed
 width = 30000
 height = 25000
 
