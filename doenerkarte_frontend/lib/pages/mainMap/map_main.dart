@@ -1,8 +1,12 @@
+import 'package:doenerkarte/communication/entities/Doener.dart';
+import 'package:doenerkarte/communication/repositories/doener_area_repository.dart';
 import 'package:doenerkarte/core/core_widgets/main_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../communication/entities/Area.dart';
 class MapMain extends StatefulWidget {
   const MapMain({super.key});
 
@@ -15,6 +19,9 @@ class _MapMainState extends State<MapMain> {
   MapController mapController = MapController();
   @override
   void initState() {
+    Future<List<Doener>> doeners = DoenerAreaRepository().getDoenerFromArea(Area(48.1372, 11.5755, 48.1372, 11.5755));
+    doeners.then((value) => print(value));
+
     super.initState();
     mapController.mapEventStream.listen((event) {
       var visibleBounds = event.camera.visibleBounds;
@@ -25,6 +32,8 @@ class _MapMainState extends State<MapMain> {
 
   @override
   Widget build(BuildContext context) {
+
+
     return MainScaffold(
       child: SizedBox(
           child: FlutterMap(
