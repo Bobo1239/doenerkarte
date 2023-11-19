@@ -1,13 +1,16 @@
 import pandas as pd
 import webbrowser
+import os
 
 
 if __name__ == "__main__":
     input_file_path = 'munich_doener_df.json'
     doener_df = pd.read_json(input_file_path, lines=True)
 
+    
     df_price_file_path = 'munich_doener_df_with_price.json'
-    doener_df.to_json(df_price_file_path, orient='records', lines=True)
+    if not os.path.exists(df_price_file_path):
+        doener_df.to_json(df_price_file_path, orient='records', lines=True)
 
     num_doeners = len(doener_df)
 
