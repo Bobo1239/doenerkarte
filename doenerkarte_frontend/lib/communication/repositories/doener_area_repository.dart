@@ -7,7 +7,7 @@ import '../entities/Doener.dart';
 
 class DoenerAreaRepository{
 
-  BackendCommunicator backendCommunicator = BackendCommunicator(baseUrl: 'http://131.159.202.238:8000');
+  BackendCommunicator backendCommunicator = BackendCommunicator();
 
   /// gets list of all doeners in area
   Future<List<Doener>> getDoenerFromArea(Area area) async {

@@ -14,6 +14,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../communication/entities/Area.dart';
+import '../../communication/repositories/doener_avg_repo.dart';
 import '../../core/utils/geo_utils.dart';
 class MapMain extends StatefulWidget {
   const MapMain({super.key});
@@ -34,6 +35,7 @@ class _MapMainState extends State<MapMain> {
   LatLngBounds? currentVisibleBounds;
   TextEditingController searchController = TextEditingController();
   LatLng? currentLocation;
+  List<int> avgGridPrices = [];
 
   @override
   void initState() {
@@ -87,7 +89,7 @@ class _MapMainState extends State<MapMain> {
                 builder: (context, snapshot) => snapshot.hasData ? DoenerHeatMap(doneers: snapshot.data!) : Container()
               ),
               if((currentVisibleBounds??0) != 0)
-                AvgPriceGrid(prices: List.generate(100, (index) => index), currentVisibleBounds: currentVisibleBounds!,),
+                AvgPriceGrid(prices: avgGridPrices, currentVisibleBounds: currentVisibleBounds!,),
               AutocompleteAdress(
                 onSelected: (latLng) => {mapController.move(latLng, 15), currentLocation = latLng},)
             ],
@@ -152,5 +154,9 @@ class _MapMainState extends State<MapMain> {
     setState(() {
       doeners = DoenerAreaRepository().getDoenerFromArea(Area(   currentVisibleBounds?.south??0, currentVisibleBounds?.north??0, currentVisibleBounds?.west??0, currentVisibleBounds?.east??0));
     });
+
+    AverageGridPricesRepository().getAvgGridPrices(Area(   currentVisibleBounds?.south??0, currentVisibleBounds?.north??0, currentVisibleBounds?.west??0, currentVisibleBounds?.east??0)).then((value) => setState(() {
+      avgGridPrices = value;
+    }));
   }
 }

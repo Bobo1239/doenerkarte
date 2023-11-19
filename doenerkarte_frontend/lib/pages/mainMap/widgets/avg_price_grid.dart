@@ -8,14 +8,14 @@ class AvgPriceGrid extends StatelessWidget {
   final List<int> prices;
   final LatLngBounds currentVisibleBounds;
 
-  static int Y_GRID_SIZE = 10;
-  static int X_GRID_SIZE = 10;
+  static int Y_GRID_SIZE = 16;
+  static int X_GRID_SIZE = 16;
 
   const AvgPriceGrid({super.key, required this.prices, required this.currentVisibleBounds});
 
   @override
   Widget build(BuildContext context) {
-    List<Polygon> poligons = List.generate(prices.length, (index) => Polygon(points: getPointsViaIndex(index), color: Colors.red.withOpacity(0.01 + 0.01*index), isDotted: true, isFilled: true, borderColor: Colors.black, borderStrokeWidth: 1));
+    List<Polygon> poligons = List.generate(prices.length, (index) => Polygon(points: getPointsViaIndex(index), color: Colors.red.withOpacity(prices[index]/1000), isDotted: true, isFilled: true, borderColor: Colors.black, borderStrokeWidth: 1));
     return PolygonLayer(polygons: poligons);
   }
 
@@ -24,8 +24,8 @@ class AvgPriceGrid extends StatelessWidget {
 
   /// interpolates the points for the polygon with the given index
   List<LatLng> getPointsViaIndex(int index){
-    int x = index % X_GRID_SIZE;
-    int y = index ~/ Y_GRID_SIZE;
+    int x = index ~/ X_GRID_SIZE;
+    int y = index % Y_GRID_SIZE;
     print("x: $x, y: $y , index: $index");
     double stepsX = (currentVisibleBounds!.east - currentVisibleBounds!.west)/X_GRID_SIZE;
     double stepsY = (currentVisibleBounds!.north - currentVisibleBounds!.south)/Y_GRID_SIZE;

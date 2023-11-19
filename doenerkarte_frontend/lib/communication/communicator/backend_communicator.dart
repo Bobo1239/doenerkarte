@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 class BackendCommunicator {
   final String baseUrl;
 
-  BackendCommunicator({required this.baseUrl});
+  BackendCommunicator({this.baseUrl = 'http://thinkpad-p14s-arch:8000'});
 
   Future<dynamic> get(String endpoint) async {
     final response = await http.get(Uri.parse('$baseUrl/$endpoint'));
