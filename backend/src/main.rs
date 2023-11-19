@@ -1,15 +1,14 @@
-use bigdecimal::ToPrimitive;
 use geo_types::{Geometry, Point};
 use geozero::wkb;
 use log::error;
-use rand::Rng;
 use rocket::fairing::{self, AdHoc};
 use rocket::serde::json::Json;
 use rocket::{get, launch, post, routes, Build, Rocket};
 use rocket_db_pools::{Connection, Database};
 use serde::{Deserialize, Serialize};
+use sqlx::types::BigDecimal;
 
-// TODO: unwrap()s
+// TODO: Error handling...
 
 #[derive(Deserialize)]
 #[serde(rename_all = "kebab-case")]
@@ -38,12 +37,7 @@ fn rocket() -> _ {
         .attach(AdHoc::try_on_ignite("SQLx Migrations", run_migrations))
         .mount(
             "/",
-            routes![
-                index,
-                doener_in_bounding_box,
-                price_grid_in_bounding_box,
-                rating_grid_in_bounding_box
-            ],
+            routes![index, doener_in_bounding_box, price_grid_in_bounding_box],
         )
 }
 
@@ -79,6 +73,10 @@ async fn run_migrations(rocket: Rocket<Build>) -> fairing::Result {
                         data.price.map(|p| (p.parse::<f32>().unwrap() * 100.0) as i32),
                         wkb::Encode(Geometry::Point(Point::new(data.lon, data.lat))) as _,
                     ).execute(&**db).await.unwrap();
+                    sqlx::query!("VACUUM ANALYZE kebab")
+                        .execute(&**db)
+                        .await
+                        .unwrap();
                 }
                 Ok(rocket)
             }
@@ -96,13 +94,6 @@ fn index() -> &'static str {
     "Hello, world!"
 }
 
-#[derive(Serialize)]
-struct Response {
-    doener: Vec<Doener>,
-    // TODO: selectable size? other grid types? (price, rating)
-    grid: [[f32; 16]; 16],
-}
-
 #[post("/doener_in_bounding_box", data = "<bb>")]
 async fn doener_in_bounding_box(
     bb: Json<BoundingBox>,
@@ -112,7 +103,7 @@ async fn doener_in_bounding_box(
 
     // 4326 is WGS 84
     let results = sqlx::query_as!(
-        PointRec,
+        KebabRecord,
         r#"
         SELECT name, price_cents, address,rating, position as "position!: _"
         FROM kebab
@@ -147,46 +138,96 @@ async fn doener_in_bounding_box(
     Json(doener)
 }
 
-const GRID_SIZE: usize = 16;
-// NOTE: Vec<f32> since Serialize isn't implemented for large arrays (TODO: When is const generics )
+// NOTE: Vec<f32> since Serialize isn't implemented for large arrays
 #[post("/price_grid_in_bounding_box", data = "<bb>")]
 async fn price_grid_in_bounding_box(
     bb: Json<BoundingBox>,
     mut db: Connection<Db>,
 ) -> Json<Vec<u32>> {
-    let step_lon = (bb.lon_max - bb.lon_min) / GRID_SIZE as f64;
-    let step_lat = (bb.lat_max - bb.lat_min) / GRID_SIZE as f64;
-    let mut ret = [0; GRID_SIZE * GRID_SIZE];
-    for y in 0..GRID_SIZE {
-        for x in 0..GRID_SIZE {
-            let lon_low = bb.lon_min + x as f64 * step_lon;
-            let lat_low = bb.lat_min + y as f64 * step_lat;
-            let lon_high = lon_low + step_lon;
-            let lat_high = lat_low + step_lat;
-            let avg = sqlx::query!(
-                r#"
-                    SELECT AVG(price_cents)
-                    FROM kebab
-                    WHERE ST_Intersects(
-                        position,
-                        ST_MakeEnvelope ($1, $2, $3, $4, 4326)::geography('POLYGON')
-                    )
-                "#,
-                lon_low,
-                lat_low,
-                lon_high,
-                lat_high
+    // NOTE: This manual implementation is quite slow (~700ms)
+    // use bigdecimal::ToPrimitive;
+    // const GRID_SIZE: usize = 16;
+
+    // let step_lon = (bb.lon_max - bb.lon_min) / GRID_SIZE as f64;
+    // let step_lat = (bb.lat_max - bb.lat_min) / GRID_SIZE as f64;
+    // let mut ret = [0; GRID_SIZE * GRID_SIZE];
+    // for y in 0..GRID_SIZE {
+    //     for x in 0..GRID_SIZE {
+    //         let lon_low = bb.lon_min + x as f64 * step_lon;
+    //         let lat_low = bb.lat_min + y as f64 * step_lat;
+    //         let lon_high = lon_low + step_lon;
+    //         let lat_high = lat_low + step_lat;
+    //         let avg = sqlx::query!(
+    //             r#"
+    //                 SELECT AVG(price_cents)
+    //                 FROM kebab
+    //                 WHERE ST_Intersects(
+    //                     position,
+    //                     ST_MakeEnvelope ($1, $2, $3, $4, 4326)::geography('POLYGON')
+    //                 )
+    //             "#,
+    //             lon_low,
+    //             lat_low,
+    //             lon_high,
+    //             lat_high
+    //         )
+    //         .fetch_one(&mut **db)
+    //         .await
+    //         .unwrap()
+    //         .avg
+    //         .map(|avg| avg.to_f32().unwrap())
+    //         .unwrap_or(0.);
+    //         ret[y * GRID_SIZE + x] = avg.round() as u32;
+    //     }
+    // }
+    // Json(ret.to_vec())
+
+    // Courtesy of ChatGPT...
+    let avg_grid: Vec<u32> = sqlx::query!(
+        r#"
+        WITH grid AS (
+            SELECT
+                $1::numeric + (($3::numeric - $1::numeric) / 16) * lon_index AS lon,
+                $2::numeric + (($4::numeric - $2::numeric) / 16) * lat_index AS lat
+            FROM
+                generate_series(0, 15) AS lon_index,
+                generate_series(0, 15) AS lat_index
+        )
+        SELECT
+            grid.lon,
+            grid.lat,
+            COALESCE(ROUND(AVG(kebab.price_cents))::integer, 0) AS avg_price
+        FROM
+            grid
+        LEFT JOIN
+            kebab
+        ON
+            ST_Contains(
+                ST_MakeEnvelope(
+                    grid.lon, grid.lat,
+                    grid.lon + (($3::numeric - $1::numeric) / 16),
+                    grid.lat + (($4::numeric - $2::numeric) / 16),
+                    4326
+                ),
+                kebab.position
             )
-            .fetch_one(&mut **db)
-            .await
-            .unwrap()
-            .avg
-            .map(|avg| avg.to_f32().unwrap())
-            .unwrap_or(0.);
-            ret[y * GRID_SIZE + x] = avg.round() as u32;
-        }
-    }
-    Json(ret.to_vec())
+        GROUP BY
+            grid.lat, grid.lon
+        ORDER BY
+            grid.lat, grid.lon;
+        "#,
+        BigDecimal::try_from(bb.lon_min).unwrap(),
+        BigDecimal::try_from(bb.lat_min).unwrap(),
+        BigDecimal::try_from(bb.lon_max).unwrap(),
+        BigDecimal::try_from(bb.lat_max).unwrap()
+    )
+    .fetch_all(&mut **db)
+    .await
+    .unwrap()
+    .into_iter()
+    .map(|x| x.avg_price.map(|x| x as u32).unwrap_or(0))
+    .collect();
+    Json(avg_grid)
 }
 
 #[derive(Database)]
@@ -194,7 +235,7 @@ async fn price_grid_in_bounding_box(
 struct Db(sqlx::PgPool);
 
 #[derive(Debug)]
-struct PointRec {
+struct KebabRecord {
     name: String,
     price_cents: Option<i32>,
     position: wkb::Decode<geo_types::Geometry<f64>>,

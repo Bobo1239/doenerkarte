@@ -125,7 +125,6 @@ dependencies = [
  "geo-types",
  "geozero",
  "log",
- "rand",
  "rocket",
  "rocket_db_pools",
  "serde",
