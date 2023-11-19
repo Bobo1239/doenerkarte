@@ -170,7 +170,17 @@ class _MapMainState extends State<MapMain> {
       return Container(
         child: ListTile(
           title: Text(doener.name),
-          subtitle: Text("${getDistanceInMeters(currentLocation??LatLng(0, 0), LatLng(doener.lat, doener.lon))/1000} km"),
+          subtitle: SizedBox(
+            height: 100,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("${getDistanceInMeters(currentLocation??LatLng(0, 0), LatLng(doener.lat, doener.lon))/1000} km"),
+                Text("Rating: ${doener.rating} "),
+                Text("Address: ${doener.address}"),
+              ],
+            ),
+          ),
           trailing: Text("${(doener.priceCents.toDouble() / 100)}€"),
         ),
       );
@@ -183,7 +193,7 @@ class _MapMainState extends State<MapMain> {
       doeners = DoenerAreaRepository().getDoenerFromArea(Area(   currentVisibleBounds?.south??0, currentVisibleBounds?.north??0, currentVisibleBounds?.west??0, currentVisibleBounds?.east??0));
     });
 
-    AverageGridPricesRepository().getAvgGridPrices(Area(   currentVisibleBounds?.south??0, currentVisibleBounds?.north??0, currentVisibleBounds?.west??0, currentVisibleBounds?.east??0)).then((value) => setState(() {
+    AverageGridDataRepository().getAvgGridPrices(Area(   currentVisibleBounds?.south??0, currentVisibleBounds?.north??0, currentVisibleBounds?.west??0, currentVisibleBounds?.east??0)).then((value) => setState(() {
       avgGridPrices = value;
     }));
   }

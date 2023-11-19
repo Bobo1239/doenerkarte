@@ -1,21 +1,23 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_map_heatmap/flutter_map_heatmap.dart';
 import 'package:http/http.dart';
 import 'package:latlong2/latlong.dart';
 
 class AvgPriceGrid extends StatelessWidget {
+
   final List<int> prices;
   final LatLngBounds currentVisibleBounds;
 
   static int Y_GRID_SIZE = 16;
   static int X_GRID_SIZE = 16;
 
-  const AvgPriceGrid({super.key, required this.prices, required this.currentVisibleBounds});
+  AvgPriceGrid({super.key, required this.prices, required this.currentVisibleBounds});
 
   @override
   Widget build(BuildContext context) {
-    List<Polygon> poligons = List.generate(prices.length, (index) => Polygon(points: getPointsViaIndex(index), color: Colors.red.withOpacity(prices[index]/1000), isDotted: true, isFilled: true, borderColor: Colors.black, borderStrokeWidth: 1));
+    List<Polygon> poligons = List.generate(prices.length, (index) => Polygon(points: getPointsViaIndex(index), color: Color.lerp(Colors.blue, Colors.red, prices[index]/1000)?.withOpacity(prices[index]/1000)??Colors.transparent, isDotted: true, isFilled: true, borderColor: Colors.black, borderStrokeWidth: 1));
     return PolygonLayer(polygons: poligons);
   }
 
