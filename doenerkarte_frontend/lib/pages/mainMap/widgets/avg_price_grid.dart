@@ -26,18 +26,17 @@ class AvgPriceGrid extends StatelessWidget {
   List<LatLng> getPointsViaIndex(int index){
     int x = index ~/ X_GRID_SIZE;
     int y = index % Y_GRID_SIZE;
-    print("x: $x, y: $y , index: $index");
+
     double stepsX = (currentVisibleBounds!.east - currentVisibleBounds!.west)/X_GRID_SIZE;
     double stepsY = (currentVisibleBounds!.north - currentVisibleBounds!.south)/Y_GRID_SIZE;
-    print("stepsX: $stepsX, stepsY: $stepsY");
-    print("north: ${currentVisibleBounds?.north}, south: ${currentVisibleBounds?.south}, east: ${currentVisibleBounds?.east}, west: ${currentVisibleBounds?.west}");
+
 
 
     LatLng topLeft = LatLng((currentVisibleBounds?.south ?? 0) + (stepsY * x), (currentVisibleBounds?.west ?? 0) + stepsX * y);
     LatLng topRight = LatLng((currentVisibleBounds?.south ?? 0) + stepsY * (x+1), (currentVisibleBounds?.west ?? 0) + stepsX * y);
     LatLng bottomLeft = LatLng((currentVisibleBounds?.south ?? 0) + stepsY * x, (currentVisibleBounds?.west ?? 0) + stepsX * (y+1));
     LatLng bottomRight = LatLng((currentVisibleBounds?.south ?? 0) + stepsY * (x+1), (currentVisibleBounds?.west ?? 0) + stepsX * (y+1));
-    print("topLeft: $topLeft, topRight: $topRight, bottomLeft: $bottomLeft, bottomRight: $bottomRight");
+
 
     return [topLeft, topRight, bottomRight, bottomLeft];
 

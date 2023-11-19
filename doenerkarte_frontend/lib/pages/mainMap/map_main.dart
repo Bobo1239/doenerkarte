@@ -37,6 +37,13 @@ class _MapMainState extends State<MapMain> {
   LatLng? currentLocation;
   List<int> avgGridPrices = [];
 
+
+  bool showAvg = true;
+  bool showHeatmap = true;
+  bool showMarkers = true;
+
+
+
   @override
   void initState() {
 
@@ -80,24 +87,45 @@ class _MapMainState extends State<MapMain> {
                   ),
                 ],
               ),
-              FutureBuilder(
-                future: doeners,
-                builder: (context, snapshot) => buildForSnapshot(snapshot),
-              ),
-              FutureBuilder(
-                future: doeners,
-                builder: (context, snapshot) => snapshot.hasData ? DoenerHeatMap(doneers: snapshot.data!) : Container()
-              ),
-              if((currentVisibleBounds??0) != 0)
+              if(showMarkers)
+                FutureBuilder(
+                  future: doeners,
+                  builder: (context, snapshot) => buildForSnapshot(snapshot),
+                ),
+              if(showHeatmap)
+                FutureBuilder(
+                  future: doeners,
+                  builder: (context, snapshot) => snapshot.hasData && (snapshot.data?.length??0) != 0? DoenerHeatMap(doneers: snapshot.data!) : Container()
+                ),
+              if((currentVisibleBounds??0) != 0 && showAvg)
                 AvgPriceGrid(prices: avgGridPrices, currentVisibleBounds: currentVisibleBounds!,),
               AutocompleteAdress(
-                onSelected: (latLng) => {mapController.move(latLng, 15), currentLocation = latLng},)
+                onSelected: (latLng) => {mapController.move(latLng, 15), currentLocation = latLng},),
+              buildTogglers(),
             ],
           ),
       ),
     );
   }
 
+
+  buildTogglers() {
+    return Align(
+      alignment: Alignment.bottomLeft,
+      child: Container(
+        child: Row(
+          children: [
+            Text("Heatmap", style: TextStyle(color: Colors.red, backgroundColor: Colors.white.withOpacity(0.8)),),
+            Switch(value: showHeatmap, onChanged: (value) => setState(() => showHeatmap = value)),
+            Text("Avg", style: TextStyle(color: Colors.red, backgroundColor: Colors.white.withOpacity(0.8)),),
+            Switch(value: showAvg, onChanged: (value) => setState(() => showAvg = value)),
+            Text("Marker", style: TextStyle(color: Colors.red, backgroundColor: Colors.white.withOpacity(0.8)),),
+            Switch(value: showMarkers, onChanged: (value) => setState(() => showMarkers = value)),
+          ],
+        ),
+      ),
+    );
+  }
 
   buildForSnapshot(AsyncSnapshot<List<Doener>> snapshot) {
     if(snapshot.connectionState == ConnectionState.waiting){
