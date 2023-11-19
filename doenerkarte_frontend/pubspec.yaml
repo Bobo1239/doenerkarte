@@ -39,8 +39,10 @@ dependencies:
   url_launcher: ^6.2.1
   beamer: ^1.5.6
   http: ^1.1.0
-  geocode: ^1.0.3
-  flutter_osm_plugin: ^0.70.2
+  flutter_map_heatmap:
+    git:
+      url: https://github.com/kookyleo/fluttermap_heatmap.git
+      ref: main
 
 dev_dependencies:
   flutter_test:

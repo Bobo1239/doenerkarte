@@ -94,7 +94,7 @@ class _AutocompleteAdressState extends State<AutocompleteAdress> {
     return Container(
         margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.white.withOpacity(0.7),
           borderRadius: BorderRadius.circular(10),
         ),
 

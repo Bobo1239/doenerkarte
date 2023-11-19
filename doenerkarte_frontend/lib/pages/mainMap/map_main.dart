@@ -1,11 +1,15 @@
 
+import 'dart:async';
+
 import 'package:doenerkarte/communication/entities/Doener.dart';
 import 'package:doenerkarte/communication/repositories/doener_area_repository.dart';
 import 'package:doenerkarte/core/core_widgets/main_scaffold.dart';
 import 'package:doenerkarte/core/reusable_widgetas/adress_autocomplete.dart';
+import 'package:doenerkarte/pages/mainMap/widgets/avg_price_grid.dart';
+import 'package:doenerkarte/pages/mainMap/widgets/doener_heatmap.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:geocode/geocode.dart';
+
 import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -20,7 +24,12 @@ class MapMain extends StatefulWidget {
 
 class _MapMainState extends State<MapMain> {
 
+
+
+
+  final LatLng startLocation = const LatLng(48.1372, 11.5755);
   MapController mapController = MapController();
+  //TODO: this should not be a future
   Future<List<Doener>>? doeners;
   LatLngBounds? currentVisibleBounds;
   TextEditingController searchController = TextEditingController();
@@ -30,9 +39,9 @@ class _MapMainState extends State<MapMain> {
   void initState() {
 
     super.initState();
+    currentLocation = startLocation;
     mapController.mapEventStream.listen((event) {
       setState(() {
-        currentLocation = mapController.camera.center;
         currentVisibleBounds = event.camera.visibleBounds;
       });
       loadDoener();
@@ -48,10 +57,10 @@ class _MapMainState extends State<MapMain> {
       child: SizedBox(
           child: FlutterMap(
             mapController: mapController,
-            options: const MapOptions(
+            options: MapOptions(
               //TODO: disable rotation
               interactiveFlags: InteractiveFlag.pinchZoom | InteractiveFlag.drag,
-              initialCenter: LatLng(48.1372, 11.5755),
+              initialCenter: startLocation,
               initialZoom: 9.2,
             ),
             children: [
@@ -60,6 +69,7 @@ class _MapMainState extends State<MapMain> {
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                 userAgentPackageName: 'com.example.app',
               ),
+
               RichAttributionWidget(
                 attributions: [
                   TextSourceAttribution(
@@ -68,13 +78,16 @@ class _MapMainState extends State<MapMain> {
                   ),
                 ],
               ),
-              Container(
-                  color: Colors.blue,
-                  child: IconButton(onPressed: loadDoener, icon: Icon(Icons.no_food))),
               FutureBuilder(
                 future: doeners,
                 builder: (context, snapshot) => buildForSnapshot(snapshot),
               ),
+              FutureBuilder(
+                future: doeners,
+                builder: (context, snapshot) => snapshot.hasData ? DoenerHeatMap(doneers: snapshot.data!) : Container()
+              ),
+              if((currentVisibleBounds??0) != 0)
+                AvgPriceGrid(prices: List.generate(100, (index) => index), currentVisibleBounds: currentVisibleBounds!,),
               AutocompleteAdress(
                 onSelected: (latLng) => {mapController.move(latLng, 15), currentLocation = latLng},)
             ],
@@ -83,18 +96,6 @@ class _MapMainState extends State<MapMain> {
     );
   }
 
-
-  searchAdress(String stringAdress){
-    GeoCode geoCode = GeoCode();
-    geoCode.forwardGeocoding(address: stringAdress).then((value) {
-      if(value.latitude == null || value.longitude == null){
-        return;
-      }else{
-        mapController.move(LatLng(value.latitude!, value.longitude!), 15);
-        loadDoener();
-      }
-    });
-  }
 
   buildForSnapshot(AsyncSnapshot<List<Doener>> snapshot) {
     if(snapshot.connectionState == ConnectionState.waiting){
