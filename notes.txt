@@ -1,0 +1,34 @@
+# doenermap
+
+## MVP
+- Current location
+- Map with data:
+    - Location
+    - Price for standard kebab
+    - User rating (granularity? system? spiciness?)
+- Average price (visible region/whole dataset)
+- Pricing/density/rating heatmap
+
+# Stretch goals
+- Data
+    - Special offers
+    - Whole menu
+    - Working hours
+    - Historic data?
+- Moderation
+- Recommendation (cheapest; best rated in radius)
+- Crowdsourcing
+    - Select location on map; then enter data: price
+- regional special doener offer notificaitons
+
+# Data
+- 66
+- iskandar
+- pascha
+- weka
+- schweden
+- netto
+- vr bank
+
+# Inspiration
+- https://gigabitgrundbuch.bund.de/GIGA/DE/Breitbandatlas/Vollbild/start.html
